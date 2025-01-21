@@ -1,0 +1,116 @@
+:root {
+  --color-yellow: #f4d04e;
+  --color-gray-950: #111;
+  --color-gray-500: #6b6b6b;
+  --color-white: #fff;
+
+  --spacing-300: 2.4rem;
+  --spacing-150: 1.2rem;
+  --spacing-100: 0.8rem;
+  --spacing-50: 0.4rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--spacing-300);
+  background-color: var(--color-yellow);
+
+  font-family: "Figtree", sans-serif;
+  font-weight: 500;
+  color: var(--color-gray-950);
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  max-width: 38rem;
+  background-color: var(--color-white);
+  padding: var(--spacing-300);
+  border: solid 1px #000;
+  border-radius: 2rem;
+  box-shadow: 1rem 1rem 0 var(--color-gray-950);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover,
+.card:focus {
+  box-shadow: 2rem 2rem 0 var(--color-gray-950);
+}
+
+.card:hover .card__title a,
+.card:focus .card__title a {
+  color: var(--color-yellow);
+  transition: all 0.8s;
+}
+
+.card__img {
+  border-radius: 1rem;
+  max-width: 100%;
+}
+
+.card__tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: start;
+  font-size: 1.4rem;
+  font-weight: 800;
+  padding: var(--spacing-100) var(--spacing-150);
+  background-color: var(--color-yellow);
+  border-radius: 0.3rem;
+  margin-bottom: -0.8rem;
+}
+
+.card__date {
+  font-size: 1.4rem;
+}
+
+.card__title {
+  font-size: clamp(2.2rem, 4vw, 2.4rem);
+  line-height: 1.1;
+  font-weight: 800;
+
+  a {
+    text-decoration: none;
+    color: var(--color-gray-950);
+  }
+}
+
+.card__text {
+  font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+  color: var(--color-gray-500);
+
+  line-height: 1.6;
+}
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150);
+}
+
+.card__author-pic {
+  height: 3.2rem;
+}
+
+.card__author-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
